@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Briefrr</title>
+  <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+  <div class="onboarding-container">
+    <!-- Step 1: Welcome & Get API Key -->
+    <div class="step active" id="step-1">
+      <div class="logo">
+        <div class="logo-icon">⚡</div>
+        <h1>Welcome to <span class="brand">Briefrr</span></h1>
+        <p class="subtitle">Instantly understand any webpage with AI-powered summaries and explanations.</p>
+      </div>
+
+      <div class="card">
+        <h2>Get your free Gemini API key</h2>
+        <p class="info">Briefrr uses Google's Gemini API. You need a free API key — no credit card required.</p>
+
+        <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          🔑 Open Google AI Studio
+        </a>
+
+        <div class="instructions">
+          <h3>How to get your key:</h3>
+          <ol>
+            <li>Click the button above to open Google AI Studio</li>
+            <li>Sign in with your Google account</li>
+            <li>Click <strong>"Create API Key"</strong></li>
+            <li>Copy the generated key</li>
+          </ol>
+        </div>
+
+        <div class="input-group">
+          <div class="input-wrapper">
+            <input type="password" id="api-key-input" placeholder="Paste your API key here..." autocomplete="off">
+            <button class="toggle-visibility" id="toggle-key" title="Show/Hide key">👁️</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="btn-verify">🔍 Verify & Save</button>
+
+        <div class="status" id="status-message"></div>
+      </div>
+    </div>
+
+    <!-- Step 2: Success -->
+    <div class="step" id="step-2">
+      <div class="card success-card">
+        <div class="success-icon">✅</div>
+        <h2>You're all set!</h2>
+        <p class="info">Here's how to use Briefrr:</p>
+
+        <div class="usage-guide">
+          <div class="guide-item">
+            <span class="guide-icon">🖱️</span>
+            <span>Click the <strong>Briefrr icon</strong> in your toolbar on any webpage</span>
+          </div>
+          <div class="guide-item">
+            <span class="guide-icon">⚡</span>
+            <span>Choose <strong>Highlights</strong> for a quick summary</span>
+          </div>
+          <div class="guide-item">
+            <span class="guide-icon">📖</span>
+            <span>Choose <strong>Explain</strong> for a deep dive</span>
+          </div>
+          <div class="guide-item">
+            <span class="guide-icon">📑</span>
+            <span>A panel will slide in from the right with your explanation</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-large" id="btn-get-started">🚀 Get Started</button>
+      </div>
+    </div>
+
+    <!-- Progress dots -->
+    <div class="progress-dots">
+      <span class="dot active" data-step="1"></span>
+      <span class="dot" data-step="2"></span>
+    </div>
+  </div>
+
+  <script src="utils/storage.js"></script>
+  <script src="utils/gemini-api.js"></script>
+  <script src="onboarding.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Extension packaging
+*.zip
+*.crx
+*.pem
+
+# Logs
+logs/
+*.log

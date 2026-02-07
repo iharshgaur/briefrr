@@ -1,0 +1,24 @@
+/* ── Briefrr Content Script — minimal host-page styles ──
+   The actual drawer UI lives inside a Shadow DOM.
+   This file only provides the outer container positioning. */
+
+#briefrr-host {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 0 !important;
+  height: 100vh !important;
+  z-index: 2147483647 !important;
+  pointer-events: none;
+}
+
+#briefrr-host.open {
+  width: 400px !important;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  #briefrr-host.open {
+    width: 100vw !important;
+  }
+}

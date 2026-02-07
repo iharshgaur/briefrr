@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefrr</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Shown when no API key is configured -->
+  <div id="setup-view" class="view" style="display:none;">
+    <div class="header-bar">
+      <span class="header-logo">⚡</span>
+      <span class="header-title">Briefrr</span>
+    </div>
+    <div class="setup-body">
+      <p class="setup-msg">Setup required — configure your Gemini API key to get started.</p>
+      <button class="btn btn-primary" id="btn-open-onboarding">🔑 Set Up Now</button>
+    </div>
+  </div>
+
+  <!-- Shown when API key is set -->
+  <div id="ready-view" class="view" style="display:none;">
+    <div class="header-bar">
+      <span class="header-logo">⚡</span>
+      <span class="header-title">Briefrr</span>
+      <span class="status-badge" id="status-badge">Ready</span>
+    </div>
+
+    <div class="page-title" id="page-title"></div>
+
+    <div class="mode-cards">
+      <button class="mode-card" id="btn-highlights">
+        <span class="mode-icon">⚡</span>
+        <div class="mode-info">
+          <span class="mode-name">Highlights</span>
+          <span class="mode-desc">Key points in 30 seconds</span>
+        </div>
+      </button>
+      <button class="mode-card" id="btn-explain">
+        <span class="mode-icon">📖</span>
+        <div class="mode-info">
+          <span class="mode-name">Explain</span>
+          <span class="mode-desc">Detailed breakdown of this page</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="footer-bar">
+      <button class="icon-btn" id="btn-settings" title="Settings">⚙️</button>
+    </div>
+  </div>
+
+  <script src="utils/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
