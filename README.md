@@ -64,3 +64,9 @@ briefrr/
 ## Version
 
 1.0.0
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2026 Harsh Gaur
